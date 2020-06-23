@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package api;
+
+service Generator {
+  rpc Generator(GeneratorRequest) returns(GeneratorResponse);
+}
+
+message GeneratorRequest {
+  int64 length = 1;
+  bool num = 2;
+  bool up = 3;
+}
+
+message GeneratorResponse {
+  string password = 1;
+}
